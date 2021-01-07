@@ -1,0 +1,19 @@
+using System;
+
+namespace TypeConversion
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            byte h = 1;
+            int i = h;
+            Console.WriteLine(i);
+            int a = 1; //cannot add value over 256 due to overflow.
+            byte b = (byte) a;
+            Console.WriteLine(b);
+
+
+        }
+    }
+}
