@@ -1,0 +1,66 @@
+using System;
+
+namespace Anagram
+{
+    class MainClass
+    {
+        public static void Main(string[] args)
+        {
+
+
+            while (true)
+            {
+                Console.WriteLine("Write a word.");
+                char[] firstWordArray = Console.ReadLine().ToLower().ToCharArray();
+                Console.WriteLine("Write another word.");
+                char[] secondWordArray = Console.ReadLine().ToLower().ToCharArray();
+
+                if (firstWordArray.Length != secondWordArray.Length)
+                {
+                    Console.WriteLine("These words are not anagrams of each other. Press any key to continue.");
+                    Console.ReadLine();
+                    Console.WriteLine("Would you like to continue 'Y' or 'N'?");
+                    string firstAnswer = Console.ReadLine().ToLower();
+                    if (firstAnswer == "y")
+                    {
+                        continue;
+                    }
+                    if (firstAnswer == "n")
+                    {
+                        return;
+                    }
+                }
+
+                Array.Sort(firstWordArray);
+                Array.Sort(secondWordArray);
+
+                string firstWord = new string(firstWordArray);
+                string secondWord = new string(secondWordArray);
+
+
+                
+                if (firstWord == secondWord)
+                {
+                    Console.WriteLine("These words are anagrams of each other. Press any key to continue.");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine("These words are not anagrams. Press any key to continue.");
+                    Console.ReadLine();
+                }
+
+                Console.WriteLine("Would you like to continue 'Y' or 'N'?");
+                string secondAnswer = Console.ReadLine().ToLower();
+                if (secondAnswer == "y")
+                {     
+                    continue;
+                }
+                if (secondAnswer == "n")
+                {
+                    return;
+                }
+            }
+        } 
+    }
+}
