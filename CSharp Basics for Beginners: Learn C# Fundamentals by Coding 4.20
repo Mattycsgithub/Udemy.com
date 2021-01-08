@@ -1,0 +1,37 @@
+using System;
+
+namespace Objects
+{
+    public class Person
+    {
+        public string Name;
+        public void Introduce()
+        {
+            Console.WriteLine("Hi, my name is" + Name + ".");     
+        }
+       
+    }
+    
+
+    public class Calculator
+    {
+
+        public static int Add(int a, int b)
+        {
+            return a + b;
+        }
+        int result = Calculator.Add(1, 2);
+    }
+
+    /* 
+   
+    int number;
+    Person person = new Person();
+    var person = new Person();
+    person.Name = "Matt";
+    person.Introduce();
+
+    */
+
+    
+}
