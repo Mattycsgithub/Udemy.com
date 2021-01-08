@@ -1,0 +1,24 @@
+using System;
+
+namespace MissingNumber
+{
+    class MainClass
+    {
+        public static void Main(string[] args)
+        {
+            int n = 5; // n = last number in Range
+            int sumRange = (n * (n + 1))/2;  // This is the sum of any range
+            Console.WriteLine(sumRange); // Check the sum of the Range
+            int[] missingNumber = new int[] { 1, 2, 3 , 5}; //Omit one number the range.
+            int sumMissingNumber = 0; //Set initial value of sum
+            for (int i = 0; i < missingNumber.Length; i++)// Loop over the array adding all integers tp the total
+            {
+                sumMissingNumber += missingNumber[i];
+            }
+            int answer = sumRange - sumMissingNumber;//Subtract the total sum of the range - the range with the missing number
+            Console.WriteLine(answer);//Check the answer
+
+
+        }
+    }
+}
